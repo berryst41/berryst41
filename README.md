@@ -1,12 +1,12 @@
 <div align="center">
 
-# 🍓 딸기농장에 오신 걸 환영해요!
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:ff6b81,100:ffc2d1&height=220&section=header&text=%EB%94%B8%EA%B8%B0%EB%86%8D%EC%9E%A5&fontSize=56&fontColor=ffffff&fontAlignY=38&desc=berryst41&descAlignY=58&descSize=18&animation=fadeIn" width="100%" alt="딸기농장">
 
-**ENFP 행복하게 사는 것이 목표인 선생님** 😊
-교실에서 바로 쓰는 웹 도구를 하나씩 키우고 있어요.
+<img src="https://readme-typing-svg.demolab.com?font=Noto+Sans+KR&weight=700&size=24&duration=3000&pause=800&color=FF6B81&center=true&vCenter=true&width=600&height=50&lines=ENFP%20%ED%96%89%EB%B3%B5%ED%95%98%EA%B2%8C%20%EC%82%AC%EB%8A%94%20%EA%B2%83%EC%9D%B4%20%EB%AA%A9%ED%91%9C%EC%9D%B8%20%EC%84%A0%EC%83%9D%EB%8B%98;%EA%B5%90%EC%8B%A4%EC%97%90%EC%84%9C%20%EC%93%B0%EB%8A%94%20%EC%9B%B9%20%EB%8F%84%EA%B5%AC%EB%A5%BC%20%ED%82%A4%EC%9B%8C%EC%9A%94;%EC%98%A4%EB%8A%98%EB%8F%84%20%EC%A6%90%EA%B2%81%EA%B2%8C%21" alt="ENFP 행복하게 사는 것이 목표인 선생님">
 
-![교실](https://img.shields.io/badge/교실에서-바로_쓰기-ff6b81?style=for-the-badge)
-![무료](https://img.shields.io/badge/설치·가입-필요_없음-2f9e44?style=for-the-badge)
+![ENFP](https://img.shields.io/badge/MBTI-ENFP-ff6b81?style=for-the-badge)
+![목표](https://img.shields.io/badge/목표-행복하게_살기-ffb703?style=for-the-badge)
+![교실](https://img.shields.io/badge/교실에서-바로_쓰기-8ac926?style=for-the-badge)
 
 </div>
 
@@ -35,5 +35,7 @@
 <div align="center">
 
 <sub>🍓 쓰다가 불편한 점이 있으면 언제든 알려 주세요!</sub>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:ffc2d1,100:ff6b81&height=120&section=footer" width="100%" alt="">
 
 </div>
