@@ -2,8 +2,8 @@
 
 # 🍓 딸기농장에 오신 걸 환영해요!
 
-**교실에서 바로 쓰는 웹 도구를 하나씩 키우고 있어요.**
-설치 없이 링크만 열면 태블릿, 노트북, 휴대폰 어디서나 돼요.
+**ENFP 행복하게 사는 것이 목표인 선생님** 😊
+교실에서 바로 쓰는 웹 도구를 하나씩 키우고 있어요.
 
 ![교실](https://img.shields.io/badge/교실에서-바로_쓰기-ff6b81?style=for-the-badge)
 ![무료](https://img.shields.io/badge/설치·가입-필요_없음-2f9e44?style=for-the-badge)
