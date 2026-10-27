@@ -1,5 +1,5 @@
 # 프로필 README의 자동 칸들을 다른 저장소 내용으로 새로 채워요.
-#   TOOLS  : school 저장소 README의 "한눈에 보기" 표를 그대로 가져와요.
+#   TOOLS  : school 저장소 README의 "한눈에 보기" 표를 묶음(업무용·수업용)째 가져와요.
 #   TOYS   : toy-store 안의 장난감 폴더마다 README 첫 소개 줄을 가져와요.
 #   RECENT : 최근 업데이트된 공개 저장소 5개 (설명이 없으면 README 첫 소개 줄).
 import datetime, json, os, re, urllib.error, urllib.parse, urllib.request
@@ -16,6 +16,9 @@ OVERRIDES = {
     "폭탄원숭이": "3명이 협동해서 폭탄을 해체하며 서로 돕는 법을 배우는 게임",
     "자료 공유 사이트": "사진·영상·파일을 QR코드로 학생들이 업로드하고 다운로드할 수 있는 공간",
 }
+
+# 도구를 처음 본 날짜 (new! 배지를 누구에게 달지 정할 때 써요)
+SEEN = os.path.join(os.path.dirname(__file__), "tools-seen.json")
 
 
 def get(path, raw=False):
@@ -46,21 +49,39 @@ def summary(md):
 
 def tools_block():
     md = get(f"/repos/{USER}/school/readme", raw=True) or ""
-    m = re.search(r"## ✨ 한눈에 보기\s*\n(.*?)\n\s*\n", md, re.S)
-    rows = [l for l in (m.group(1).splitlines() if m else []) if l.startswith("|")][2:]
-    out = ["| | 도구 | 이럴 때 써요 | 바로가기 |", "|:---:|:---|:---|:---:|"]
-    for row in rows:
-        cells = row.strip("|").split("|")
-        if len(cells) < 4:
+    m = re.search(r"## ✨ 한눈에 보기\s*\n(.*?)\n---", md, re.S)
+    head = ["| | 도구 | 이럴 때 써요 | 바로가기 |", "|:---:|:---|:---|:---:|"]
+    groups, rows = [], []  # [(묶음 이름, [행...])]
+    for line in (m.group(1).splitlines() if m else []):
+        if line.startswith("#### "):
+            groups.append((line[5:].strip(), []))
             continue
-        cells = [c.strip() for c in cells]
+        cells = [c.strip() for c in line.strip().strip("|").split("|")]
+        if not line.startswith("|") or len(cells) < 4 or ":---" in line or "도구 <sub>" in line:
+            continue
+        cells = cells[:4]
         cells[1] = re.sub(r"\]\(#", f"](https://github.com/{USER}/school#", cells[1])
         name = re.sub(r"[*\[\]]|\(.*?\)", "", cells[1]).strip()
         cells[2] = OVERRIDES.get(name, cells[2])
-        out.append(cells[:4])
-    if out[2:]:
-        out[-1][1] += NEW  # school 표는 새 도구를 맨 아래에 추가해요
-    return "\n".join(r if isinstance(r, str) else "| " + " | ".join(r) + " |" for r in out)
+        if not groups:
+            groups.append(("", []))
+        groups[-1][1].append(cells)
+        rows.append(cells)
+    # 표 순서는 마음대로 바꿀 수 있으니, 처음 본 날짜를 기억해 두고 가장 늦게 들어온 도구에 new!를 달아요
+    seen = json.load(open(SEEN, encoding="utf-8")) if os.path.exists(SEEN) else {}
+    now = datetime.datetime.now(datetime.timezone.utc).isoformat()
+    for r in rows:
+        seen.setdefault(r[1], now)
+    if rows:
+        max(rows, key=lambda r: seen[r[1]])[1] += NEW
+    with open(SEEN, "w", encoding="utf-8") as f:
+        json.dump(seen, f, ensure_ascii=False, indent=2)
+        f.write("\n")
+    out = []
+    for title, items in groups:
+        if items:
+            out += ([f"**{title}**", ""] if title else []) + head + ["| " + " | ".join(r) + " |" for r in items] + [""]
+    return "\n".join(out).rstrip()
 
 
 def toys_block():
