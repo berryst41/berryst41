@@ -50,38 +50,38 @@ def summary(md):
 def tools_block():
     md = get(f"/repos/{USER}/school/readme", raw=True) or ""
     m = re.search(r"## ✨ 한눈에 보기\s*\n(.*?)\n---", md, re.S)
-    head = ["| | 도구 | 이럴 때 써요 | 바로가기 |", "|:---:|:---|:---|:---:|"]
-    groups, rows = [], []  # [(묶음 이름, [행...])]
-    for line in (m.group(1).splitlines() if m else []):
-        if line.startswith("#### "):
-            groups.append((line[5:].strip(), []))
+    rows, out = [], []  # rows: [이름, 칸 html...]
+    for tr in re.findall(r"<tr>(.*?)</tr>", m.group(1) if m else "", re.S):
+        if "<th" in tr:
+            out.append(tr.replace("<sub>(누르면 설명으로)</sub>", "").replace("도구 <", "도구<"))
             continue
-        cells = [c.strip() for c in line.strip().strip("|").split("|")]
-        if not line.startswith("|") or len(cells) < 4 or ":---" in line or "도구 <sub>" in line:
+        cells = re.findall(r"<td([^>]*)>(.*?)</td>", tr, re.S)
+        if len(cells) == 1:  # 묶음 제목 (업무용·수업용)
+            out.append(f"<td{cells[0][0]}>{cells[0][1]}</td>")
             continue
-        cells = cells[:4]
-        cells[1] = re.sub(r"\]\(#", f"](https://github.com/{USER}/school#", cells[1])
-        name = re.sub(r"[*\[\]]|\(.*?\)", "", cells[1]).strip()
-        cells[2] = OVERRIDES.get(name, cells[2])
-        if not groups:
-            groups.append(("", []))
-        groups[-1][1].append(cells)
-        rows.append(cells)
+        name = re.sub(r"<[^>]+>", "", cells[0][1]).split(" ", 1)[-1].strip()
+        cells = [[attr, html.replace('href="#', f'href="https://github.com/{USER}/school#')] for attr, html in cells]
+        if name in OVERRIDES:
+            cells[1][1] = OVERRIDES[name]
+        rows.append((name, cells))
+        out.append(cells)
     # 표 순서는 마음대로 바꿀 수 있으니, 처음 본 날짜를 기억해 두고 가장 늦게 들어온 도구에 new!를 달아요
     seen = json.load(open(SEEN, encoding="utf-8")) if os.path.exists(SEEN) else {}
     now = datetime.datetime.now(datetime.timezone.utc).isoformat()
-    for r in rows:
-        seen.setdefault(r[1], now)
+    for name, _ in rows:
+        seen.setdefault(name, now)
     if rows:
-        max(rows, key=lambda r: seen[r[1]])[1] += NEW
+        max(rows, key=lambda r: seen[r[0]])[1][0][1] += NEW
     with open(SEEN, "w", encoding="utf-8") as f:
         json.dump(seen, f, ensure_ascii=False, indent=2)
         f.write("\n")
-    out = []
-    for title, items in groups:
-        if items:
-            out += ([f"**{title}**", ""] if title else []) + head + ["| " + " | ".join(r) + " |" for r in items] + [""]
-    return "\n".join(out).rstrip()
+    lines = ["<table>"]
+    for r in out:
+        if isinstance(r, str):
+            lines.append(f"<tr>{r.strip()}</tr>")
+        else:
+            lines += ["<tr>"] + [f"<td{a}>{h}</td>" for a, h in r] + ["</tr>"]
+    return "\n".join(lines + ["</table>"])
 
 
 def toys_block():
