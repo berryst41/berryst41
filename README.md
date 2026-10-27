@@ -7,7 +7,7 @@
 ![ENFP](https://img.shields.io/badge/MBTI-ENFP-ff6b81?style=for-the-badge)
 ![목표](https://img.shields.io/badge/목표-행복하게_살기-ffb703?style=for-the-badge)
 ![교실](https://img.shields.io/badge/교실에서-바로_쓰기-8ac926?style=for-the-badge)
-![취미](https://img.shields.io/badge/취미-게임🎮-7b2cbf?style=for-the-badge)
+![취미](https://img.shields.io/badge/취미-게임-7b2cbf?style=for-the-badge)
 
 </div>
 
