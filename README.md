@@ -22,11 +22,13 @@
 
 ## 🌱 키우고 있는 도구들
 
+<!-- TOOLS:START -->
 | | 도구 | 이럴 때 써요 | 바로가기 |
 |:---:|:---|:---|:---:|
 | 🐵💣 | **폭탄원숭이** | 3명이 협동해서 폭탄을 해체하며 서로 돕는 법을 배우는 게임 | [**🎮 게임 하기**](https://berryst41.github.io/school/) |
 | 📮 | **자료 공유 사이트** | 사진·영상·파일을 QR코드로 학생들이 업로드하고 다운로드할 수 있는 공간 | [**📂 열기**](https://berryst41.github.io/school/share/) |
 | 🧾 | **품의 기안 도우미** | 쇼핑몰 장바구니로 품의 기안을 쓰고 K-에듀파인에 채울 때 | [**⬇️ 내려받기**](https://github.com/berryst41/school/raw/main/pumui/pumui-extension.zip) |
+<!-- TOOLS:END -->
 
 👉 자세한 설명과 사용법은 **[🍓 딸기농장 저장소](https://github.com/berryst41/school)** 에서 볼 수 있어요.
 
@@ -36,11 +38,14 @@
 
 학교 일과는 상관없이, 제 호기심과 탐구로 만든 것들은 **[toy-store](https://github.com/berryst41/toy-store)** 에 하나씩 진열해요.
 
+<!-- TOYS:START -->
+<!-- TOYS:END -->
+
 <br>
 
 ## 🆕 최근 업데이트
 
-<sub>매일 아침 자동으로 바뀌어요.</sub>
+<sub>🤖 도구 목록, 장난감 진열장, 최근 업데이트는 한 시간마다 자동으로 바뀌어요.</sub>
 
 <!-- RECENT:START -->
 | 저장소 | 설명 | 마지막 업데이트 |

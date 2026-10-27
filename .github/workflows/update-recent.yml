@@ -2,7 +2,7 @@ name: 최근 업데이트 갱신
 
 on:
   schedule:
-    - cron: "0 21 * * *"   # 매일 아침 6시 (한국 시간)
+    - cron: "17 * * * *"   # 매시간 한 번
   workflow_dispatch:        # Actions 탭에서 직접 눌러 돌릴 수도 있어요
 
 permissions:
