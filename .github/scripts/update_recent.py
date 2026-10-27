@@ -2,7 +2,7 @@
 #   TOOLS  : school 저장소 README의 "한눈에 보기" 표를 그대로 가져와요.
 #   TOYS   : toy-store 안의 장난감 폴더마다 README 첫 소개 줄을 가져와요.
 #   RECENT : 최근 업데이트된 공개 저장소 5개 (설명이 없으면 README 첫 소개 줄).
-import datetime, json, os, re, urllib.error, urllib.request
+import datetime, json, os, re, urllib.error, urllib.parse, urllib.request
 
 USER = "berryst41"
 API = "https://api.github.com"
@@ -20,7 +20,8 @@ OVERRIDES = {
 
 def get(path, raw=False):
     accept = "application/vnd.github.raw" if raw else "application/vnd.github+json"
-    req = urllib.request.Request(API + path, headers={"Accept": accept, "Authorization": f"Bearer {TOKEN}"})
+    # 한글 폴더 이름도 주소에 쓸 수 있게 바꿔요
+    req = urllib.request.Request(API + urllib.parse.quote(path, safe="/?=&"), headers={"Accept": accept, "Authorization": f"Bearer {TOKEN}"})
     try:
         body = urllib.request.urlopen(req).read().decode("utf-8")
     except urllib.error.HTTPError as e:
