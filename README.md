@@ -43,6 +43,10 @@
 <sub>매일 아침 자동으로 바뀌어요.</sub>
 
 <!-- RECENT:START -->
+| 저장소 | 설명 | 마지막 업데이트 |
+|:---|:---|:---:|
+| [**school**](https://github.com/berryst41/school) |  | 2026.10.27 |
+| [**toy-store**](https://github.com/berryst41/toy-store) |  | 2026.10.27 |
 <!-- RECENT:END -->
 
 <br>
