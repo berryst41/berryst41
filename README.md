@@ -38,6 +38,15 @@
 
 <br>
 
+## 🆕 최근 업데이트
+
+<sub>매일 아침 자동으로 바뀌어요.</sub>
+
+<!-- RECENT:START -->
+<!-- RECENT:END -->
+
+<br>
+
 <div align="center">
 
 <sub>🍓 쓰다가 불편한 점이 있으면 언제든 알려 주세요!</sub>
