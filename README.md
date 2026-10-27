@@ -7,8 +7,17 @@
 ![ENFP](https://img.shields.io/badge/MBTI-ENFP-ff6b81?style=for-the-badge)
 ![목표](https://img.shields.io/badge/목표-행복하게_살기-ffb703?style=for-the-badge)
 ![교실](https://img.shields.io/badge/교실에서-바로_쓰기-8ac926?style=for-the-badge)
+![취미](https://img.shields.io/badge/취미-게임🎮-7b2cbf?style=for-the-badge)
 
 </div>
+
+<br>
+
+## 💖 저는 이런 사람이에요
+
+- 🌈 **ENFP** · 행복하게 사는 게 목표예요.
+- 🎮 **취미는 게임!** 그 외에도 세상 모든 게 다 재미있는 **취미 부자**예요.
+- 🍓 재미있는 건 교실에서도 써 보고 싶어서, 직접 만들어 보기도 해요.
 
 <br>
 
