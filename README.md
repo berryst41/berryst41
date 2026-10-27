@@ -24,7 +24,7 @@
 
 <!-- TOOLS:START -->
 <table>
-<tr><th align="left">도구</th><th align="left">이럴 때 써요</th><th>바로가기</th></tr>
+<tr><th align="left">도구</th><th align="left">이럴 때 써요</th><th width="80">열기</th></tr>
 <tr><td colspan="3"><b>💼 업무에 쓰는 도구</b></td></tr>
 <tr>
 <td>📘 <a href="https://github.com/berryst41/school#claude-guide"><b>처음 써 보는 Claude</b></a> <img src="https://img.shields.io/badge/new!-ffd43b?style=flat-square" alt="new!" height="16"></td>
