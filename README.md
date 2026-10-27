@@ -28,7 +28,8 @@
 | 🐵💣 | **[폭탄원숭이](https://github.com/berryst41/school#bomb)** | 3명이 협동해서 폭탄을 해체하며 서로 돕는 법을 배우는 게임 | [**🎮 게임 하기**](https://berryst41.github.io/school/) |
 | 📮 | **[자료 공유 사이트](https://github.com/berryst41/school#share)** | 사진·영상·파일을 QR코드로 학생들이 업로드하고 다운로드할 수 있는 공간 | [**📂 열기**](https://berryst41.github.io/school/share/) |
 | 🧾 | **[품의 기안 도우미](https://github.com/berryst41/school#pumui)** | 쇼핑몰 장바구니로 품의 기안을 쓰고 K-에듀파인에 바로 채울 때 (선생님용 크롬 확장 프로그램) | [**⬇️ 내려받기**](https://github.com/berryst41/school/raw/main/pumui/pumui-extension.zip) |
-| 🖥️ | **[메인 모니터로 열기](https://github.com/berryst41/school#main-monitor)** <img src="https://img.shields.io/badge/new!-ffd43b?style=flat-square" alt="new!" height="16"> | 듀얼 모니터(노트북 + 전자칠판)에서 한글·엑셀이 늘 메인 모니터에서 열리게 할 때 (선생님용 윈도우 프로그램) | [**⬇️ 내려받기**](https://github.com/berryst41/school/raw/main/main-monitor/main-monitor.zip) |
+| 🖥️ | **[메인 모니터로 열기](https://github.com/berryst41/school#main-monitor)** | 듀얼 모니터(노트북 + 전자칠판)에서 한글·엑셀이 늘 메인 모니터에서 열리게 할 때 (선생님용 윈도우 프로그램) | [**⬇️ 내려받기**](https://github.com/berryst41/school/raw/main/main-monitor/main-monitor.zip) |
+| 📘 | **[처음 써 보는 Claude](https://github.com/berryst41/school#claude-guide)** <img src="https://img.shields.io/badge/new!-ffd43b?style=flat-square" alt="new!" height="16"> | AI가 처음인 선생님이 가정통신문·평어·수업 준비에 Claude를 써 볼 때 (PDF 안내서) | [**📖 바로 보기**](https://berryst41.github.io/school/docs/claude-guide.pdf) |
 <!-- TOOLS:END -->
 
 👉 자세한 설명과 사용법은 **[🍓 딸기농장 저장소](https://github.com/berryst41/school)** 에서 볼 수 있어요.
@@ -42,7 +43,7 @@
 <!-- TOYS:START -->
 | 장난감 | 어떤 거예요? |
 |:---|:---|
-| 📦 *곧 첫 장난감이 들어와요!* | |
+| [**방탈출-예약-도우미**](https://github.com/berryst41/toy-store/tree/main/%EB%B0%A9%ED%83%88%EC%B6%9C-%EC%98%88%EC%95%BD-%EB%8F%84%EC%9A%B0%EB%AF%B8) <img src="https://img.shields.io/badge/new!-ffd43b?style=flat-square" alt="new!" height="16"> | 인기 방탈출은 예약이 열리자마자 몇 초 만에 마감돼요. |
 <!-- TOYS:END -->
 
 <br>
