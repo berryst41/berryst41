@@ -8,6 +8,9 @@ USER = "berryst41"
 API = "https://api.github.com"
 TOKEN = os.environ["GITHUB_TOKEN"]
 
+# 가장 최근에 만든 것 옆에 붙는 노란 배지
+NEW = ' <img src="https://img.shields.io/badge/new!-ffd43b?style=flat-square" alt="new!" height="16">'
+
 # 프로필에서만 다르게 보이고 싶은 설명 (도구 이름: 설명)
 OVERRIDES = {
     "폭탄원숭이": "3명이 협동해서 폭탄을 해체하며 서로 돕는 법을 배우는 게임",
@@ -53,16 +56,24 @@ def tools_block():
         cells[1] = re.sub(r"\]\(#", f"](https://github.com/{USER}/school#", cells[1])
         name = re.sub(r"[*\[\]]|\(.*?\)", "", cells[1]).strip()
         cells[2] = OVERRIDES.get(name, cells[2])
-        out.append("| " + " | ".join(cells[:4]) + " |")
-    return "\n".join(out)
+        out.append(cells[:4])
+    if out[2:]:
+        out[-1][1] += NEW  # school 표는 새 도구를 맨 아래에 추가해요
+    return "\n".join(r if isinstance(r, str) else "| " + " | ".join(r) + " |" for r in out)
 
 
 def toys_block():
     items = get(f"/repos/{USER}/toy-store/contents/") or []
     out = ["| 장난감 | 어떤 거예요? |", "|:---|:---|"]
-    for it in sorted((i for i in items if i["type"] == "dir" and not i["name"].startswith(".")), key=lambda i: i["name"]):
+    toys = []
+    for it in (i for i in items if i["type"] == "dir" and not i["name"].startswith(".")):
+        commits = get(f"/repos/{USER}/toy-store/commits?path={it['path']}&per_page=100") or []
+        born = commits[-1]["commit"]["committer"]["date"] if commits else ""
         desc = summary(get(f"/repos/{USER}/toy-store/contents/{it['path']}/README.md", raw=True))
-        out.append(f"| [**{it['name']}**]({it['html_url']}) | {desc} |")
+        toys.append((born, it, desc))
+    toys.sort(key=lambda t: t[0], reverse=True)  # 최근에 만든 장난감이 위로
+    for n, (born, it, desc) in enumerate(toys):
+        out.append(f"| [**{it['name']}**]({it['html_url']}){NEW if n == 0 else ''} | {desc} |")
     if len(out) == 2:
         out.append("| 📦 *곧 첫 장난감이 들어와요!* | |")
     return "\n".join(out)
@@ -71,12 +82,14 @@ def toys_block():
 def recent_block():
     kst = datetime.timezone(datetime.timedelta(hours=9))
     out = ["| 저장소 | 설명 | 마지막 업데이트 |", "|:---|:---|:---:|"]
-    for r in get(f"/users/{USER}/repos?sort=pushed&per_page=20"):
-        if r["name"] == USER or r["fork"] or r["private"]:
-            continue
+    repos = [r for r in get(f"/users/{USER}/repos?sort=pushed&per_page=20")
+             if r["name"] != USER and not r["fork"] and not r["private"]]
+    newest = max((r["created_at"] for r in repos), default="")
+    for r in repos:
         desc = (r["description"] or "").replace("|", "/") or summary(get(f"/repos/{USER}/{r['name']}/readme", raw=True))
         day = datetime.datetime.fromisoformat(r["pushed_at"].replace("Z", "+00:00")).astimezone(kst)
-        out.append(f"| [**{r['name']}**]({r['html_url']}) | {desc} | {day:%Y.%m.%d} |")
+        badge = NEW if r["created_at"] == newest else ""
+        out.append(f"| [**{r['name']}**]({r['html_url']}){badge} | {desc} | {day:%Y.%m.%d} |")
         if len(out) == 7:
             break
     return "\n".join(out)

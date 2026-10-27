@@ -49,7 +49,7 @@
 
 ## 🆕 최근 업데이트
 
-<sub>🤖 도구 목록, 장난감 진열장, 최근 업데이트는 한 시간마다 자동으로 바뀌어요.</sub>
+<sub>🤖 도구 목록, 장난감 진열장, 최근 업데이트는 한 시간마다 자동으로 바뀌어요. 노란 <img src="https://img.shields.io/badge/new!-ffd43b?style=flat-square" alt="new!" height="14"> 배지는 가장 최근에 만든 신상이에요.</sub>
 
 <!-- RECENT:START -->
 | 저장소 | 설명 | 마지막 업데이트 |
