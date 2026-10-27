@@ -32,6 +32,12 @@
 
 <br>
 
+## 🧸 장난감 가게
+
+학교 일과는 상관없이, 제 호기심과 탐구로 만든 것들은 **[toy-store](https://github.com/berryst41/toy-store)** 에 하나씩 진열해요.
+
+<br>
+
 <div align="center">
 
 <sub>🍓 쓰다가 불편한 점이 있으면 언제든 알려 주세요!</sub>
