@@ -23,20 +23,36 @@
 ## 🌱 키우고 있는 도구들
 
 <!-- TOOLS:START -->
-**💼 업무에 쓰는 도구**
-
-| | 도구 | 이럴 때 써요 | 바로가기 |
-|:---:|:---|:---|:---:|
-| 📘 | **[처음 써 보는 Claude](https://github.com/berryst41/school#claude-guide)** <img src="https://img.shields.io/badge/new!-ffd43b?style=flat-square" alt="new!" height="16"> | AI가 처음인 선생님이 가정통신문·평어·수업 준비에 Claude를 써 볼 때 (PDF 안내서) | [**📖 바로 보기**](https://berryst41.github.io/school/docs/claude-guide.pdf) |
-| 🧾 | **[품의 기안 도우미](https://github.com/berryst41/school#pumui)** | 쇼핑몰 장바구니로 품의 기안을 쓰고 K-에듀파인에 바로 채울 때 (선생님용 크롬 확장 프로그램) | [**⬇️ 내려받기**](https://github.com/berryst41/school/raw/main/pumui/pumui-extension.zip) |
-| 🖥️ | **[메인 모니터로 열기](https://github.com/berryst41/school#main-monitor)** | 듀얼 모니터(노트북 + 전자칠판)에서 한글·엑셀이 늘 메인 모니터에서 열리게 할 때 (선생님용 윈도우 프로그램) | [**⬇️ 내려받기**](https://github.com/berryst41/school/raw/main/main-monitor/main-monitor.zip) |
-
-**🧑‍🏫 수업에 쓰는 도구**
-
-| | 도구 | 이럴 때 써요 | 바로가기 |
-|:---:|:---|:---|:---:|
-| 📮 | **[자료 공유 사이트](https://github.com/berryst41/school#share)** | 사진·영상·파일을 QR코드로 학생들이 업로드하고 다운로드할 수 있는 공간 | [**📂 열기**](https://berryst41.github.io/school/share/) |
-| 🐵💣 | **[폭탄원숭이](https://github.com/berryst41/school#bomb)** | 3명이 협동해서 폭탄을 해체하며 서로 돕는 법을 배우는 게임 | [**🎮 게임 하기**](https://berryst41.github.io/school/) |
+<table>
+<tr><th align="left">도구</th><th align="left">이럴 때 써요</th><th>바로가기</th></tr>
+<tr><td colspan="3"><b>💼 업무에 쓰는 도구</b></td></tr>
+<tr>
+<td>📘 <a href="https://github.com/berryst41/school#claude-guide"><b>처음 써 보는 Claude</b></a> <img src="https://img.shields.io/badge/new!-ffd43b?style=flat-square" alt="new!" height="16"></td>
+<td>AI가 처음인 선생님을 위한 Claude 안내서 (PDF)</td>
+<td align="center"><a href="https://berryst41.github.io/school/docs/claude-guide.pdf"><b>📖 보기</b></a></td>
+</tr>
+<tr>
+<td>🧾 <a href="https://github.com/berryst41/school#pumui"><b>품의 기안 도우미</b></a></td>
+<td>쇼핑몰 장바구니로 품의 기안을 쓰고 에듀파인에 바로 채워요 (크롬 확장 프로그램)</td>
+<td align="center"><a href="https://github.com/berryst41/school/raw/main/pumui/pumui-extension.zip"><b>⬇️ 받기</b></a></td>
+</tr>
+<tr>
+<td>🖥️ <a href="https://github.com/berryst41/school#main-monitor"><b>메인 모니터로 열기</b></a></td>
+<td>듀얼 모니터에서 한글·엑셀이 늘 메인 모니터에 열려요 (윈도우 프로그램)</td>
+<td align="center"><a href="https://github.com/berryst41/school/raw/main/main-monitor/main-monitor.zip"><b>⬇️ 받기</b></a></td>
+</tr>
+<tr><td colspan="3"><b>🧑‍🏫 수업에 쓰는 도구</b></td></tr>
+<tr>
+<td>📮 <a href="https://github.com/berryst41/school#share"><b>자료 공유 사이트</b></a></td>
+<td>사진·영상·파일을 QR코드로 학생들이 업로드하고 다운로드할 수 있는 공간</td>
+<td align="center"><a href="https://berryst41.github.io/school/share/"><b>📂 열기</b></a></td>
+</tr>
+<tr>
+<td>🐵💣 <a href="https://github.com/berryst41/school#bomb"><b>폭탄원숭이</b></a></td>
+<td>3명이 협동해서 폭탄을 해체하며 서로 돕는 법을 배우는 게임</td>
+<td align="center"><a href="https://berryst41.github.io/school/"><b>🎮 하기</b></a></td>
+</tr>
+</table>
 <!-- TOOLS:END -->
 
 👉 자세한 설명과 사용법은 **[🍓 딸기농장 저장소](https://github.com/berryst41/school)** 에서 볼 수 있어요.
