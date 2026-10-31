@@ -34,12 +34,12 @@
 <tr>
 <td>🧾 <a href="https://github.com/berryst41/school#pumui"><b>품의 기안 도우미</b></a></td>
 <td>쇼핑몰 장바구니로 품의 기안을 쓰고 에듀파인에 바로 채워요 (크롬 확장 프로그램)</td>
-<td align="center"><a href="https://github.com/berryst41/school/raw/main/pumui/pumui-extension.zip"><b>⬇️ 받기</b></a></td>
+<td align="center"><a href="https://github.com/berryst41/school/raw/main/pumui/pumui-extension.zip"><b>⬇️ 받기 v0.2.0</b></a></td>
 </tr>
 <tr>
 <td>🖥️ <a href="https://github.com/berryst41/school#main-monitor"><b>메인 모니터로 열기</b></a></td>
 <td>듀얼 모니터에서 한글·엑셀이 늘 메인 모니터에 열려요 (윈도우 프로그램)</td>
-<td align="center"><a href="https://github.com/berryst41/school/raw/main/main-monitor/main-monitor.zip"><b>⬇️ 받기</b></a></td>
+<td align="center"><a href="https://github.com/berryst41/school/raw/main/main-monitor/main-monitor.zip"><b>⬇️ 받기 v1.0.0</b></a></td>
 </tr>
 <tr><td colspan="3"><b>🧑‍🏫 수업에 쓰는 도구</b></td></tr>
 <tr>
