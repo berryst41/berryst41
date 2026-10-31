@@ -91,11 +91,15 @@ def toys_block():
     for it in (i for i in items if i["type"] == "dir" and not i["name"].startswith(".")):
         commits = get(f"/repos/{USER}/toy-store/commits?path={it['path']}&per_page=100") or []
         born = commits[-1]["commit"]["committer"]["date"] if commits else ""
-        desc = summary(get(f"/repos/{USER}/toy-store/contents/{it['path']}/README.md", raw=True))
+        readme = get(f"/repos/{USER}/toy-store/contents/{it['path']}/README.md", raw=True)
+        desc = summary(readme)
+        # 장난감 README의 "지금 버전: **v0.3.3**"을 읽어 받기 단추에 함께 적어요
+        ver = re.search(r"지금 버전:\s*\*\*(v?[\d.]+)\*\*", readme or "")
+        ver = " " + ver.group(1) if ver else ""
         # 폴더 바로 안에 있는 zip을 프로필에서 바로 내려받게 해요
         files = get(f"/repos/{USER}/toy-store/contents/{it['path']}") or []
         zips = [f for f in files if f["type"] == "file" and f["name"].lower().endswith(".zip")]
-        link = f"[**⬇️ 받기**](https://github.com/{USER}/toy-store/raw/main/{urllib.parse.quote(zips[0]['path'])})" if zips else ""
+        link = f"[**⬇️ 받기{ver}**](https://github.com/{USER}/toy-store/raw/main/{urllib.parse.quote(zips[0]['path'])})" if zips else ""
         toys.append((born, it, desc, link))
     toys.sort(key=lambda t: t[0], reverse=True)  # 최근에 만든 장난감이 위로
     for n, (born, it, desc, link) in enumerate(toys):
