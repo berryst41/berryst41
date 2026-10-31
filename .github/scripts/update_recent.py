@@ -1,6 +1,6 @@
 # 프로필 README의 자동 칸들을 다른 저장소 내용으로 새로 채워요.
 #   TOOLS  : school 저장소 README의 "한눈에 보기" 표를 묶음(업무용·수업용)째 가져와요.
-#   TOYS   : toy-store 안의 장난감 폴더마다 README 첫 소개 줄을 가져와요.
+#   TOYS   : toy-store 안의 장난감 폴더마다 README 첫 소개 줄을 가져와요. 폴더에 zip이 있으면 받기 단추도 달아요.
 #   RECENT : 최근 업데이트된 공개 저장소 5개 (설명이 없으면 README 첫 소개 줄).
 import datetime, json, os, re, urllib.error, urllib.parse, urllib.request
 
@@ -86,18 +86,22 @@ def tools_block():
 
 def toys_block():
     items = get(f"/repos/{USER}/toy-store/contents/") or []
-    out = ["| 장난감 | 어떤 거예요? |", "|:---|:---|"]
+    out = ["| 장난감 | 어떤 거예요? | 받기 |", "|:---|:---|:---:|"]
     toys = []
     for it in (i for i in items if i["type"] == "dir" and not i["name"].startswith(".")):
         commits = get(f"/repos/{USER}/toy-store/commits?path={it['path']}&per_page=100") or []
         born = commits[-1]["commit"]["committer"]["date"] if commits else ""
         desc = summary(get(f"/repos/{USER}/toy-store/contents/{it['path']}/README.md", raw=True))
-        toys.append((born, it, desc))
+        # 폴더 바로 안에 있는 zip을 프로필에서 바로 내려받게 해요
+        files = get(f"/repos/{USER}/toy-store/contents/{it['path']}") or []
+        zips = [f for f in files if f["type"] == "file" and f["name"].lower().endswith(".zip")]
+        link = f"[**⬇️ 받기**](https://github.com/{USER}/toy-store/raw/main/{urllib.parse.quote(zips[0]['path'])})" if zips else ""
+        toys.append((born, it, desc, link))
     toys.sort(key=lambda t: t[0], reverse=True)  # 최근에 만든 장난감이 위로
-    for n, (born, it, desc) in enumerate(toys):
-        out.append(f"| [**{it['name']}**]({it['html_url']}){NEW if n == 0 else ''} | {desc} |")
+    for n, (born, it, desc, link) in enumerate(toys):
+        out.append(f"| [**{it['name']}**]({it['html_url']}){NEW if n == 0 else ''} | {desc} | {link} |")
     if len(out) == 2:
-        out.append("| 📦 *곧 첫 장난감이 들어와요!* | |")
+        out.append("| 📦 *곧 첫 장난감이 들어와요!* | | |")
     return "\n".join(out)
 
 

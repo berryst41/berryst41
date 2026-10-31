@@ -64,9 +64,9 @@
 학교 일과는 상관없이, 제 호기심과 탐구로 만든 것들은 **[toy-store](https://github.com/berryst41/toy-store)** 에 하나씩 진열해요.
 
 <!-- TOYS:START -->
-| 장난감 | 어떤 거예요? |
-|:---|:---|
-| [**방탈출-예약-도우미**](https://github.com/berryst41/toy-store/tree/main/%EB%B0%A9%ED%83%88%EC%B6%9C-%EC%98%88%EC%95%BD-%EB%8F%84%EC%9A%B0%EB%AF%B8) <img src="https://img.shields.io/badge/new!-ffd43b?style=flat-square" alt="new!" height="16"> | 인기 방탈출은 예약이 열리자마자 몇 초 만에 마감돼요. |
+| 장난감 | 어떤 거예요? | 받기 |
+|:---|:---|:---:|
+| [**방탈출-예약-도우미**](https://github.com/berryst41/toy-store/tree/main/%EB%B0%A9%ED%83%88%EC%B6%9C-%EC%98%88%EC%95%BD-%EB%8F%84%EC%9A%B0%EB%AF%B8) <img src="https://img.shields.io/badge/new!-ffd43b?style=flat-square" alt="new!" height="16"> | 인기 방탈출은 예약이 열리자마자 몇 초 만에 마감돼요. | [**⬇️ 받기**](https://github.com/berryst41/toy-store/raw/main/%EB%B0%A9%ED%83%88%EC%B6%9C-%EC%98%88%EC%95%BD-%EB%8F%84%EC%9A%B0%EB%AF%B8/%EB%B0%A9%ED%83%88%EC%B6%9C%EC%98%88%EC%95%BD%EB%8F%84%EC%9A%B0%EB%AF%B8.zip) |
 <!-- TOYS:END -->
 
 <br>
