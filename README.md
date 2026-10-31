@@ -79,7 +79,7 @@
 | 저장소 | 설명 | 마지막 업데이트 |
 |:---|:---|:---:|
 | [**toy-store**](https://github.com/berryst41/toy-store) <img src="https://img.shields.io/badge/new!-ffd43b?style=flat-square" alt="new!" height="16"> | 궁금한 건 일단 만들어 보는 장난감 가게 | 2026.10.31 |
-| [**school**](https://github.com/berryst41/school) | 교실에서 바로 쓰는 웹 도구들이에요. | 2026.10.28 |
+| [**school**](https://github.com/berryst41/school) | 교실에서 바로 쓰는 웹 도구들이에요. | 2026.10.31 |
 <!-- RECENT:END -->
 
 <br>
