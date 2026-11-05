@@ -37,7 +37,7 @@
 <td align="center"><a href="https://github.com/berryst41/school/raw/main/pumui/pumui-extension.zip"><b>⬇️ 받기 v0.2.0</b></a></td>
 </tr>
 <tr>
-<td>🖥️ <a href="https://github.com/berryst41/school#main-monitor"><b>메인 모니터로 열기</b></a> <img src="https://img.shields.io/badge/update-4dabf7?style=flat-square" alt="update" height="16"></td>
+<td>🖥️ <a href="https://github.com/berryst41/school#main-monitor"><b>메인 모니터로 열기</b></a> <img src="https://img.shields.io/badge/update-ff922b?style=flat-square" alt="update" height="16"></td>
 <td>듀얼 모니터에서 한글·엑셀·브라우저가 골라 둔 모니터(메인/서브)에 열려요 (윈도우 프로그램)</td>
 <td align="center"><a href="https://github.com/berryst41/school/raw/main/main-monitor/main-monitor.zip"><b>⬇️ 받기 v1.4.1</b></a></td>
 </tr>
@@ -66,19 +66,19 @@
 <!-- TOYS:START -->
 | 장난감 | 어떤 거예요? | 받기 |
 |:---|:---|:---:|
-| [**방탈출-예약-도우미**](https://github.com/berryst41/toy-store/tree/main/%EB%B0%A9%ED%83%88%EC%B6%9C-%EC%98%88%EC%95%BD-%EB%8F%84%EC%9A%B0%EB%AF%B8) <img src="https://img.shields.io/badge/new!-ffd43b?style=flat-square" alt="new!" height="16"> <img src="https://img.shields.io/badge/update-4dabf7?style=flat-square" alt="update" height="16"> | 인기 방탈출은 예약이 열리자마자 몇 초 만에 마감돼요. | [**⬇️ 받기 v0.3.4**](https://github.com/berryst41/toy-store/raw/main/%EB%B0%A9%ED%83%88%EC%B6%9C-%EC%98%88%EC%95%BD-%EB%8F%84%EC%9A%B0%EB%AF%B8/%EB%B0%A9%ED%83%88%EC%B6%9C%EC%98%88%EC%95%BD%EB%8F%84%EC%9A%B0%EB%AF%B8.zip) |
+| [**방탈출-예약-도우미**](https://github.com/berryst41/toy-store/tree/main/%EB%B0%A9%ED%83%88%EC%B6%9C-%EC%98%88%EC%95%BD-%EB%8F%84%EC%9A%B0%EB%AF%B8) <img src="https://img.shields.io/badge/new!-ffd43b?style=flat-square" alt="new!" height="16"> <img src="https://img.shields.io/badge/update-ff922b?style=flat-square" alt="update" height="16"> | 인기 방탈출은 예약이 열리자마자 몇 초 만에 마감돼요. | [**⬇️ 받기 v0.3.4**](https://github.com/berryst41/toy-store/raw/main/%EB%B0%A9%ED%83%88%EC%B6%9C-%EC%98%88%EC%95%BD-%EB%8F%84%EC%9A%B0%EB%AF%B8/%EB%B0%A9%ED%83%88%EC%B6%9C%EC%98%88%EC%95%BD%EB%8F%84%EC%9A%B0%EB%AF%B8.zip) |
 <!-- TOYS:END -->
 
 <br>
 
 ## 🆕 최근 업데이트
 
-<sub>🤖 도구 목록, 장난감 진열장, 최근 업데이트는 한 시간마다 자동으로 바뀌어요. 노란 <img src="https://img.shields.io/badge/new!-ffd43b?style=flat-square" alt="new!" height="14"> 배지는 가장 최근에 만든 신상, 파란 <img src="https://img.shields.io/badge/update-4dabf7?style=flat-square" alt="update" height="14"> 배지는 가장 최근에 고쳐서 다시 올린 거예요.</sub>
+<sub>🤖 도구 목록, 장난감 진열장, 최근 업데이트는 한 시간마다 자동으로 바뀌어요. 노란 <img src="https://img.shields.io/badge/new!-ffd43b?style=flat-square" alt="new!" height="14"> 배지는 가장 최근에 만든 신상, 주황 <img src="https://img.shields.io/badge/update-ff922b?style=flat-square" alt="update" height="14"> 배지는 가장 최근에 고쳐서 다시 올린 거예요.</sub>
 
 <!-- RECENT:START -->
 | 저장소 | 설명 | 마지막 업데이트 |
 |:---|:---|:---:|
-| [**school**](https://github.com/berryst41/school) <img src="https://img.shields.io/badge/update-4dabf7?style=flat-square" alt="update" height="16"> | 교실에서 바로 쓰는 웹 도구들이에요. | 2026.11.05 |
+| [**school**](https://github.com/berryst41/school) <img src="https://img.shields.io/badge/update-ff922b?style=flat-square" alt="update" height="16"> | 교실에서 바로 쓰는 웹 도구들이에요. | 2026.11.05 |
 | [**toy-store**](https://github.com/berryst41/toy-store) <img src="https://img.shields.io/badge/new!-ffd43b?style=flat-square" alt="new!" height="16"> | 궁금한 건 일단 만들어 보는 장난감 가게 | 2026.10.31 |
 <!-- RECENT:END -->
 
