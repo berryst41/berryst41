@@ -39,7 +39,7 @@
 <tr>
 <td>🖥️ <a href="https://github.com/berryst41/school#main-monitor"><b>메인 모니터로 열기</b></a></td>
 <td>듀얼 모니터에서 한글·엑셀·브라우저가 골라 둔 모니터(메인/서브)에 열려요 (윈도우 프로그램)</td>
-<td align="center"><a href="https://github.com/berryst41/school/raw/main/main-monitor/main-monitor.zip"><b>⬇️ 받기 v1.3.0</b></a></td>
+<td align="center"><a href="https://github.com/berryst41/school/raw/main/main-monitor/main-monitor.zip"><b>⬇️ 받기 v1.4.1</b></a></td>
 </tr>
 <tr><td colspan="3"><b>🧑‍🏫 수업에 쓰는 도구</b></td></tr>
 <tr>
