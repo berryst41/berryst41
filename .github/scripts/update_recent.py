@@ -2,6 +2,7 @@
 #   TOOLS  : school 저장소 README의 "한눈에 보기" 표를 묶음(업무용·수업용)째 가져와요.
 #   TOYS   : toy-store 안의 장난감 폴더마다 README 첫 소개 줄을 가져와요. 폴더에 zip이 있으면 받기 단추도 달아요.
 #   RECENT : 최근 업데이트된 공개 저장소 5개 (설명이 없으면 README 첫 소개 줄).
+# 표마다 가장 최근에 만든 것에 new!, 가장 최근에 고쳐서 다시 올린 것에 update 배지를 달아요.
 import datetime, json, os, re, urllib.error, urllib.parse, urllib.request
 
 USER = "berryst41"
@@ -10,6 +11,18 @@ TOKEN = os.environ["GITHUB_TOKEN"]
 
 # 가장 최근에 만든 것 옆에 붙는 노란 배지
 NEW = ' <img src="https://img.shields.io/badge/new!-ffd43b?style=flat-square" alt="new!" height="16">'
+
+# 만든 뒤에 다시 고쳐서 올린 것 옆에 붙는 파란 배지 (가장 최근에 고친 것 하나에만)
+UPDATE = ' <img src="https://img.shields.io/badge/update-4dabf7?style=flat-square" alt="update" height="16">'
+
+# 만든 날과 이만큼(시간) 넘게 떨어져서 고쳐야 "업데이트"로 쳐요 (처음 만들던 날 고친 건 빼요)
+UPDATE_GAP = datetime.timedelta(hours=12)
+
+# school 도구마다 어느 파일·폴더를 고치면 업데이트로 칠지 (설명 칸 id: 경로들). 없으면 id와 같은 이름의 폴더예요.
+TOOL_PATHS = {
+    "bomb": ["index.html", "images"],
+    "claude-guide": ["docs"],
+}
 
 # 프로필에서만 다르게 보이고 싶은 설명 (도구 이름: 설명)
 OVERRIDES = {
@@ -32,6 +45,21 @@ def get(path, raw=False):
             return None
         raise
     return body if raw else json.loads(body)
+
+
+def when(iso):
+    return datetime.datetime.fromisoformat(iso.replace("Z", "+00:00"))
+
+
+def changed(repo, paths):
+    """경로들을 처음 올린 때와 마지막으로 고친 때를 돌려줘요. 업데이트가 아니면 마지막은 None이에요."""
+    dates = []
+    for path in paths:
+        dates += [when(c["commit"]["committer"]["date"]) for c in get(f"/repos/{USER}/{repo}/commits?path={path}&per_page=100") or []]
+    if not dates:
+        return None, None
+    born, last = min(dates), max(dates)
+    return born, (last if last - born > UPDATE_GAP else None)
 
 
 def summary(md):
@@ -63,15 +91,20 @@ def tools_block():
         cells = [[attr, html.replace('href="#', f'href="https://github.com/{USER}/school#')] for attr, html in cells]
         if name in OVERRIDES:
             cells[1][1] = OVERRIDES[name]
-        rows.append((name, cells))
+        anchor = re.search(r'school#([\w-]+)"', cells[0][1])
+        rows.append((name, cells, changed("school", TOOL_PATHS.get(anchor.group(1), [anchor.group(1)]))[1] if anchor else None))
         out.append(cells)
     # 표 순서는 마음대로 바꿀 수 있으니, 처음 본 날짜를 기억해 두고 가장 늦게 들어온 도구에 new!를 달아요
     seen = json.load(open(SEEN, encoding="utf-8")) if os.path.exists(SEEN) else {}
     now = datetime.datetime.now(datetime.timezone.utc).isoformat()
-    for name, _ in rows:
+    for name, *_ in rows:
         seen.setdefault(name, now)
     if rows:
         max(rows, key=lambda r: seen[r[0]])[1][0][1] += NEW
+    # 만든 뒤에 다시 고친 도구 중 가장 최근에 고친 것 하나에 update를 달아요
+    updated = max((r for r in rows if r[2]), key=lambda r: r[2], default=None)
+    if updated:
+        updated[1][0][1] += UPDATE
     with open(SEEN, "w", encoding="utf-8") as f:
         json.dump(seen, f, ensure_ascii=False, indent=2)
         f.write("\n")
@@ -89,8 +122,7 @@ def toys_block():
     out = ["| 장난감 | 어떤 거예요? | 받기 |", "|:---|:---|:---:|"]
     toys = []
     for it in (i for i in items if i["type"] == "dir" and not i["name"].startswith(".")):
-        commits = get(f"/repos/{USER}/toy-store/commits?path={it['path']}&per_page=100") or []
-        born = commits[-1]["commit"]["committer"]["date"] if commits else ""
+        born, last = changed("toy-store", [it["path"]])
         readme = get(f"/repos/{USER}/toy-store/contents/{it['path']}/README.md", raw=True)
         desc = summary(readme)
         # 장난감 README의 "지금 버전: **v0.3.3**"을 읽어 받기 단추에 함께 적어요
@@ -100,10 +132,12 @@ def toys_block():
         files = get(f"/repos/{USER}/toy-store/contents/{it['path']}") or []
         zips = [f for f in files if f["type"] == "file" and f["name"].lower().endswith(".zip")]
         link = f"[**⬇️ 받기{ver}**](https://github.com/{USER}/toy-store/raw/main/{urllib.parse.quote(zips[0]['path'])})" if zips else ""
-        toys.append((born, it, desc, link))
+        toys.append((born or when("1970-01-01T00:00:00Z"), it, desc, link, last))
     toys.sort(key=lambda t: t[0], reverse=True)  # 최근에 만든 장난감이 위로
-    for n, (born, it, desc, link) in enumerate(toys):
-        out.append(f"| [**{it['name']}**]({it['html_url']}){NEW if n == 0 else ''} | {desc} | {link} |")
+    updated = max((t for t in toys if t[4]), key=lambda t: t[4], default=None)
+    for n, (born, it, desc, link, last) in enumerate(toys):
+        badge = (NEW if n == 0 else "") + (UPDATE if updated and it is updated[1] else "")
+        out.append(f"| [**{it['name']}**]({it['html_url']}){badge} | {desc} | {link} |")
     if len(out) == 2:
         out.append("| 📦 *곧 첫 장난감이 들어와요!* | | |")
     return "\n".join(out)
@@ -115,10 +149,13 @@ def recent_block():
     repos = [r for r in get(f"/users/{USER}/repos?sort=pushed&per_page=20")
              if r["name"] != USER and not r["fork"] and not r["private"]]
     newest = max((r["created_at"] for r in repos), default="")
+    # 만든 뒤에 다시 고친 저장소 중 가장 최근에 고친 것 하나에 update를 달아요
+    fixed = [r for r in repos if when(r["pushed_at"]) - when(r["created_at"]) > UPDATE_GAP]
+    latest = max((r["pushed_at"] for r in fixed), default="")
     for r in repos:
         desc = (r["description"] or "").replace("|", "/") or summary(get(f"/repos/{USER}/{r['name']}/readme", raw=True))
         day = datetime.datetime.fromisoformat(r["pushed_at"].replace("Z", "+00:00")).astimezone(kst)
-        badge = NEW if r["created_at"] == newest else ""
+        badge = (NEW if r["created_at"] == newest else "") + (UPDATE if r["pushed_at"] == latest else "")
         out.append(f"| [**{r['name']}**]({r['html_url']}){badge} | {desc} | {day:%Y.%m.%d} |")
         if len(out) == 7:
             break
