@@ -12,8 +12,8 @@ TOKEN = os.environ["GITHUB_TOKEN"]
 # 가장 최근에 만든 것 옆에 붙는 노란 배지
 NEW = ' <img src="https://img.shields.io/badge/new!-ffd43b?style=flat-square" alt="new!" height="16">'
 
-# 만든 뒤에 다시 고쳐서 올린 것 옆에 붙는 파란 배지 (가장 최근에 고친 것 하나에만)
-UPDATE = ' <img src="https://img.shields.io/badge/update-4dabf7?style=flat-square" alt="update" height="16">'
+# 만든 뒤에 다시 고쳐서 올린 것 옆에 붙는 주황 배지 (가장 최근에 고친 것 하나에만)
+UPDATE = ' <img src="https://img.shields.io/badge/update-ff922b?style=flat-square" alt="update" height="16">'
 
 # 만든 날과 이만큼(시간) 넘게 떨어져서 고쳐야 "업데이트"로 쳐요 (처음 만들던 날 고친 건 빼요)
 UPDATE_GAP = datetime.timedelta(hours=12)
