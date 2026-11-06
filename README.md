@@ -24,39 +24,6 @@
 
 <!-- TOOLS:START -->
 <table>
-<tr><th align="left">도구</th><th align="left">이럴 때 써요</th><th width="80">열기</th></tr>
-<tr><td colspan="3"><b>💼 업무에 쓰는 도구</b></td></tr>
-<tr>
-<td>📘 <a href="https://github.com/berryst41/school/tree/main/docs/claude-guide"><b>처음 써 보는 Claude</b></a> <img src="https://img.shields.io/badge/update-ff922b?style=flat-square" alt="update" height="16"></td>
-<td>AI가 처음인 선생님을 위한 Claude 안내서 (웹페이지·PDF)</td>
-<td align="center"><a href="https://berryst41.github.io/school/docs/claude-guide.html"><b>📖&nbsp;보&#8288;기</b></a></td>
-</tr>
-<tr>
-<td>🐙 <a href="https://github.com/berryst41/school/tree/main/docs/github-guide"><b>깃허브 첫걸음</b></a> <img src="https://img.shields.io/badge/new!-ffd43b?style=flat-square" alt="new!" height="16"></td>
-<td>깃허브가 처음인 선생님을 위한 안내서 (웹페이지)</td>
-<td align="center"><a href="https://berryst41.github.io/school/docs/github-guide.html"><b>📖&nbsp;보&#8288;기</b></a></td>
-</tr>
-<tr>
-<td>🧾 <a href="https://github.com/berryst41/school/tree/main/pumui"><b>품의 기안 도우미</b></a></td>
-<td>쇼핑몰 장바구니로 품의 기안을 쓰고 에듀파인에 바로 채워요 (크롬 확장 프로그램)</td>
-<td align="center"><a href="https://github.com/berryst41/school/raw/main/pumui/pumui-extension.zip"><b>⬇️&nbsp;받&#8288;기<br>v0.2.0</b></a></td>
-</tr>
-<tr>
-<td>🖥️ <a href="https://github.com/berryst41/school/tree/main/main-monitor"><b>메인 모니터로 열기</b></a></td>
-<td>듀얼 모니터에서 한글·엑셀·브라우저가 골라 둔 모니터(메인/서브)에 열려요 (윈도우 프로그램)</td>
-<td align="center"><a href="https://github.com/berryst41/school/raw/main/main-monitor/main-monitor.zip"><b>⬇️&nbsp;받&#8288;기<br>v1.4.1</b></a></td>
-</tr>
-<tr><td colspan="3"><b>🧑‍🏫 수업에 쓰는 도구</b></td></tr>
-<tr>
-<td>📮 <a href="https://github.com/berryst41/school/tree/main/share"><b>자료 공유 사이트</b></a></td>
-<td>사진·영상·파일을 QR코드로 학생들이 업로드하고 다운로드할 수 있는 공간</td>
-<td align="center"><a href="https://berryst41.github.io/school/share/"><b>📂&nbsp;열&#8288;기</b></a></td>
-</tr>
-<tr>
-<td>🐵💣 <a href="https://github.com/berryst41/school/tree/main/bomb-monkey"><b>폭탄원숭이</b></a></td>
-<td>3명이 협동해서 폭탄을 해체하며 서로 돕는 법을 배우는 게임</td>
-<td align="center"><a href="https://berryst41.github.io/school/"><b>🎮&nbsp;하&#8288;기</b></a></td>
-</tr>
 </table>
 <!-- TOOLS:END -->
 
