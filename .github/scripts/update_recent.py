@@ -78,7 +78,7 @@ def summary(md):
 
 def tools_block():
     md = get(f"/repos/{USER}/school/readme", raw=True) or ""
-    m = re.search(r"## ✨ 한눈에 보기\s*\n(.*?)\n---", md, re.S)
+    m = re.search(r"## ✨ 한눈에 보기\s*\n(.*?</table>)", md, re.S)
     rows, out = [], []  # rows: [이름, 칸 html...]
     for tr in re.findall(r"<tr>(.*?)</tr>", m.group(1) if m else "", re.S):
         if "<th" in tr:
