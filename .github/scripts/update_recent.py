@@ -20,8 +20,9 @@ UPDATE_GAP = datetime.timedelta(hours=12)
 
 # school 도구마다 어느 파일·폴더를 고치면 업데이트로 칠지 (설명 칸 id: 경로들). 없으면 id와 같은 이름의 폴더예요.
 TOOL_PATHS = {
-    "bomb": ["index.html", "images"],
-    "claude-guide": ["docs"],
+    "bomb-monkey": ["index.html", "images", "bomb-monkey"],
+    "docs/claude-guide": ["docs/claude-guide", "docs/claude-guide.html", "docs/claude-guide.pdf"],
+    "docs/github-guide": ["docs/github-guide", "docs/github-guide.html"],
 }
 
 # 프로필에서만 다르게 보이고 싶은 설명 (도구 이름: 설명)
@@ -81,7 +82,7 @@ def tools_block():
     rows, out = [], []  # rows: [이름, 칸 html...]
     for tr in re.findall(r"<tr>(.*?)</tr>", m.group(1) if m else "", re.S):
         if "<th" in tr:
-            out.append(tr.replace("<sub>(누르면 설명으로)</sub>", "").replace("도구 <", "도구<"))
+            out.append(re.sub(r"\s*<sub>\(누르면 설명[^<]*\)</sub>", "", tr).replace("도구 <", "도구<"))
             continue
         cells = re.findall(r"<td([^>]*)>(.*?)</td>", tr, re.S)
         if len(cells) == 1:  # 묶음 제목 (업무용·수업용)
@@ -91,7 +92,7 @@ def tools_block():
         cells = [[attr, html.replace('href="#', f'href="https://github.com/{USER}/school#')] for attr, html in cells]
         if name in OVERRIDES:
             cells[1][1] = OVERRIDES[name]
-        anchor = re.search(r'school#([\w-]+)"', cells[0][1])
+        anchor = re.search(r'school/tree/main/([^"]+)"', cells[0][1])
         rows.append((name, cells, changed("school", TOOL_PATHS.get(anchor.group(1), [anchor.group(1)]))[1] if anchor else None))
         out.append(cells)
     # 표 순서는 마음대로 바꿀 수 있으니, 처음 본 날짜를 기억해 두고 가장 늦게 들어온 도구에 new!를 달아요
