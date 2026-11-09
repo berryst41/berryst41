@@ -25,6 +25,9 @@ TOOL_PATHS = {
     "docs/github-guide": ["docs/github-guide", "docs/github-guide.html"],
 }
 
+# 프로필 목록에 절대 안 나오게 할 저장소 (프로필 자신, 개인 연구실)
+HIDDEN = {USER, "my-own-"}
+
 # 프로필에서만 다르게 보이고 싶은 설명 (도구 이름: 설명)
 OVERRIDES = {
     "폭탄원숭이": "3명이 협동해서 폭탄을 해체하며 서로 돕는 법을 배우는 게임",
@@ -148,7 +151,7 @@ def recent_block():
     kst = datetime.timezone(datetime.timedelta(hours=9))
     out = ["| 저장소 | 설명 | 마지막 업데이트 |", "|:---|:---|:---:|"]
     repos = [r for r in get(f"/users/{USER}/repos?sort=pushed&per_page=20")
-             if r["name"] != USER and not r["fork"] and not r["private"]]
+             if r["name"] not in HIDDEN and not r["fork"] and not r["private"]]
     newest = max((r["created_at"] for r in repos), default="")
     # 만든 뒤에 다시 고친 저장소 중 가장 최근에 고친 것 하나에 update를 달아요
     fixed = [r for r in repos if when(r["pushed_at"]) - when(r["created_at"]) > UPDATE_GAP]
