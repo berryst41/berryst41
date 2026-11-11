@@ -48,6 +48,11 @@
 </tr>
 <tr><td colspan="3"><b>🧑‍🏫 수업에 쓰는 도구</b></td></tr>
 <tr>
+<td>📚 <a href="https://github.com/berryst41/school/tree/main/class"><b>4원칙 학급 운영 자료실</b></a> <img src="https://img.shields.io/badge/new-2f9e44?style=flat-square" alt="new" height="16"></td>
+<td>아침 멘트·중간놀이·목힘·금요 인성놀이를 요일에 맞춰 폰·PC로 봐요 (허용 코드가 있는 사람만)</td>
+<td align="center"><a href="https://berryst41.github.io/school/class/"><b>📚&nbsp;열&#8288;기</b></a></td>
+</tr>
+<tr>
 <td>📮 <a href="https://github.com/berryst41/school/tree/main/share"><b>자료 공유 사이트</b></a></td>
 <td>사진·영상·파일을 QR코드로 학생들이 업로드하고 다운로드할 수 있는 공간</td>
 <td align="center"><a href="https://berryst41.github.io/school/share/"><b>📂&nbsp;열&#8288;기</b></a></td>
