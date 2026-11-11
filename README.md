@@ -27,7 +27,7 @@
 <tr><th align="left">도구</th><th align="left">이럴 때 써요</th><th width="80">열기</th></tr>
 <tr><td colspan="3"><b>💼 업무에 쓰는 도구</b></td></tr>
 <tr>
-<td>📘 <a href="https://github.com/berryst41/school/tree/main/docs/claude-guide"><b>처음 써 보는 Claude</b></a> <img src="https://img.shields.io/badge/update-ff922b?style=flat-square" alt="update" height="16"></td>
+<td>📘 <a href="https://github.com/berryst41/school/tree/main/docs/claude-guide"><b>처음 써 보는 Claude</b></a></td>
 <td>AI가 처음인 선생님을 위한 Claude 안내서 (웹페이지·PDF)</td>
 <td align="center"><a href="https://berryst41.github.io/school/docs/claude-guide.html"><b>📖&nbsp;보&#8288;기</b></a></td>
 </tr>
@@ -48,7 +48,7 @@
 </tr>
 <tr><td colspan="3"><b>🧑‍🏫 수업에 쓰는 도구</b></td></tr>
 <tr>
-<td>📚 <a href="https://github.com/berryst41/school/tree/main/class"><b>4원칙 학급 운영 자료실</b></a> <img src="https://img.shields.io/badge/new-2f9e44?style=flat-square" alt="new" height="16"></td>
+<td>📚 <a href="https://github.com/berryst41/school/tree/main/class"><b>4원칙 학급 운영 자료실</b></a> <img src="https://img.shields.io/badge/new!-ffd43b?style=flat-square" alt="new!" height="16"></td>
 <td>아침 멘트·중간놀이·목힘·금요 인성놀이를 요일에 맞춰 폰·PC로 봐요 (허용 코드가 있는 사람만)</td>
 <td align="center"><a href="https://berryst41.github.io/school/class/"><b>📚&nbsp;열&#8288;기</b></a></td>
 </tr>
@@ -58,12 +58,12 @@
 <td align="center"><a href="https://berryst41.github.io/school/share/"><b>📂&nbsp;열&#8288;기</b></a></td>
 </tr>
 <tr>
-<td>🐵💣 <a href="https://github.com/berryst41/school/tree/main/bomb-monkey"><b>폭탄원숭이</b></a></td>
+<td>🐵💣 <a href="https://github.com/berryst41/school/tree/main/bomb-monkey"><b>폭탄원숭이</b></a> <img src="https://img.shields.io/badge/update-ff922b?style=flat-square" alt="update" height="16"></td>
 <td>3명이 협동해서 폭탄을 해체하며 서로 돕는 법을 배우는 게임</td>
 <td align="center"><a href="https://berryst41.github.io/school/"><b>🎮&nbsp;하&#8288;기</b></a></td>
 </tr>
 <tr>
-<td>🎁 <a href="https://github.com/berryst41/school/tree/main/manitto"><b>마니또 뽑기</b></a> <img src="https://img.shields.io/badge/new!-ffd43b?style=flat-square" alt="new!" height="16"></td>
+<td>🎁 <a href="https://github.com/berryst41/school/tree/main/manitto"><b>마니또 뽑기</b></a></td>
 <td>아이들이 한 명씩 나와 버튼을 눌러 마니또를 뽑아요 (자기 자신·중복·서로 마니또 없음)</td>
 <td align="center"><a href="https://berryst41.github.io/school/manitto/"><b>🎁&nbsp;열&#8288;기</b></a></td>
 </tr>
@@ -94,7 +94,7 @@
 <!-- RECENT:START -->
 | 저장소 | 설명 | 마지막 업데이트 |
 |:---|:---|:---:|
-| [**school**](https://github.com/berryst41/school) <img src="https://img.shields.io/badge/update-ff922b?style=flat-square" alt="update" height="16"> | 교실에서 바로 쓰는 웹 도구들이에요. | 2026.11.09 |
+| [**school**](https://github.com/berryst41/school) <img src="https://img.shields.io/badge/update-ff922b?style=flat-square" alt="update" height="16"> | 교실에서 바로 쓰는 웹 도구들이에요. | 2026.11.11 |
 | [**toy-store**](https://github.com/berryst41/toy-store) <img src="https://img.shields.io/badge/new!-ffd43b?style=flat-square" alt="new!" height="16"> | 궁금한 건 일단 만들어 보는 장난감 가게 | 2026.11.06 |
 <!-- RECENT:END -->
 
