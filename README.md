@@ -81,7 +81,8 @@
 <!-- TOYS:START -->
 | 장난감 | 어떤 거예요? | 받기 |
 |:---|:---|:---:|
-| [**버스-취소표-알리미**](https://github.com/berryst41/toy-store/tree/main/%EB%B2%84%EC%8A%A4-%EC%B7%A8%EC%86%8C%ED%91%9C-%EC%95%8C%EB%A6%AC%EB%AF%B8) <img src="https://img.shields.io/badge/new!-ffd43b?style=flat-square" alt="new!" height="16"> <img src="https://img.shields.io/badge/update-ff922b?style=flat-square" alt="update" height="16"> | 명절이나 주말 고속버스는 금방 매진돼요. 그래도 누군가 취소하면 자리가 하나둘 다시 풀려요. | [**⬇️ 받기 v0.3.0**](https://github.com/berryst41/toy-store/raw/main/%EB%B2%84%EC%8A%A4-%EC%B7%A8%EC%86%8C%ED%91%9C-%EC%95%8C%EB%A6%AC%EB%AF%B8/%EB%B2%84%EC%8A%A4%EC%B7%A8%EC%86%8C%ED%91%9C%EC%95%8C%EB%A6%AC%EB%AF%B8.zip) |
+| [**저장-정리-비서**](https://github.com/berryst41/toy-store/tree/main/%EC%A0%80%EC%9E%A5-%EC%A0%95%EB%A6%AC-%EB%B9%84%EC%84%9C) <img src="https://img.shields.io/badge/new!-ffd43b?style=flat-square" alt="new!" height="16"> | 인스타그램에 저장해 둔 릴스·피드를 여러 개 골라서 AI가 읽고 맛집·레시피·여행·쇼핑으로 보기 좋게 정리해 줘요. |  |
+| [**버스-취소표-알리미**](https://github.com/berryst41/toy-store/tree/main/%EB%B2%84%EC%8A%A4-%EC%B7%A8%EC%86%8C%ED%91%9C-%EC%95%8C%EB%A6%AC%EB%AF%B8) <img src="https://img.shields.io/badge/update-ff922b?style=flat-square" alt="update" height="16"> | 명절이나 주말 고속버스는 금방 매진돼요. 그래도 누군가 취소하면 자리가 하나둘 다시 풀려요. | [**⬇️ 받기 v0.3.0**](https://github.com/berryst41/toy-store/raw/main/%EB%B2%84%EC%8A%A4-%EC%B7%A8%EC%86%8C%ED%91%9C-%EC%95%8C%EB%A6%AC%EB%AF%B8/%EB%B2%84%EC%8A%A4%EC%B7%A8%EC%86%8C%ED%91%9C%EC%95%8C%EB%A6%AC%EB%AF%B8.zip) |
 | [**방탈출-예약-도우미**](https://github.com/berryst41/toy-store/tree/main/%EB%B0%A9%ED%83%88%EC%B6%9C-%EC%98%88%EC%95%BD-%EB%8F%84%EC%9A%B0%EB%AF%B8) | 인기 방탈출은 예약이 열리자마자 몇 초 만에 마감돼요. | [**⬇️ 받기 v0.3.4**](https://github.com/berryst41/toy-store/raw/main/%EB%B0%A9%ED%83%88%EC%B6%9C-%EC%98%88%EC%95%BD-%EB%8F%84%EC%9A%B0%EB%AF%B8/%EB%B0%A9%ED%83%88%EC%B6%9C%EC%98%88%EC%95%BD%EB%8F%84%EC%9A%B0%EB%AF%B8.zip) |
 <!-- TOYS:END -->
 
@@ -94,8 +95,8 @@
 <!-- RECENT:START -->
 | 저장소 | 설명 | 마지막 업데이트 |
 |:---|:---|:---:|
-| [**school**](https://github.com/berryst41/school) <img src="https://img.shields.io/badge/update-ff922b?style=flat-square" alt="update" height="16"> | 교실에서 바로 쓰는 웹 도구들이에요. | 2026.11.13 |
-| [**toy-store**](https://github.com/berryst41/toy-store) <img src="https://img.shields.io/badge/new!-ffd43b?style=flat-square" alt="new!" height="16"> | 궁금한 건 일단 만들어 보는 장난감 가게 | 2026.11.06 |
+| [**toy-store**](https://github.com/berryst41/toy-store) <img src="https://img.shields.io/badge/new!-ffd43b?style=flat-square" alt="new!" height="16"> <img src="https://img.shields.io/badge/update-ff922b?style=flat-square" alt="update" height="16"> | 궁금한 건 일단 만들어 보는 장난감 가게 | 2026.11.14 |
+| [**school**](https://github.com/berryst41/school) | 교실에서 바로 쓰는 웹 도구들이에요. | 2026.11.14 |
 <!-- RECENT:END -->
 
 <br>
