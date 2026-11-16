@@ -48,7 +48,7 @@
 </tr>
 <tr><td colspan="3"><b>🧑‍🏫 수업에 쓰는 도구</b></td></tr>
 <tr>
-<td>📚 <a href="https://github.com/berryst41/school/tree/main/class"><b>4원칙 학급 운영 자료실</b></a> <img src="https://img.shields.io/badge/new!-ffd43b?style=flat-square" alt="new!" height="16"> <img src="https://img.shields.io/badge/update-ff922b?style=flat-square" alt="update" height="16"></td>
+<td>📚 <a href="https://github.com/berryst41/school/tree/main/class"><b>4원칙 학급 운영 자료실</b></a> <img src="https://img.shields.io/badge/update-ff922b?style=flat-square" alt="update" height="16"></td>
 <td>아침 멘트·중간놀이·목힘·금요 인성놀이를 요일에 맞춰 폰·PC로 봐요 (허용 코드가 있는 사람만)</td>
 <td align="center"><a href="https://berryst41.github.io/school/class/"><b>📚&nbsp;열&#8288;기</b></a></td>
 </tr>
@@ -66,6 +66,11 @@
 <td>🎁 <a href="https://github.com/berryst41/school/tree/main/manitto"><b>마니또 뽑기</b></a></td>
 <td>아이들이 한 명씩 나와 버튼을 눌러 마니또를 뽑아요 (자기 자신·중복·서로 마니또 없음)</td>
 <td align="center"><a href="https://berryst41.github.io/school/manitto/"><b>🎁&nbsp;열&#8288;기</b></a></td>
+</tr>
+<tr>
+<td>🎨 <a href="https://github.com/berryst41/school/tree/main/coop-art"><b>협동화 메이커</b></a> <img src="https://img.shields.io/badge/new!-ffd43b?style=flat-square" alt="new!" height="16"></td>
+<td>A4 그림을 N장으로 쪼개 재단선이 있는 PDF로 만들고, 칠한 스캔본을 한 장으로 합쳐요</td>
+<td align="center"><a href="https://berryst41.github.io/school/coop-art/"><b>🎨&nbsp;열&#8288;기</b></a></td>
 </tr>
 </table>
 <!-- TOOLS:END -->
