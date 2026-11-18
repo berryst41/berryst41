@@ -49,7 +49,7 @@
 <tr>
 <td>🤖 <a href="https://github.com/berryst41/school/tree/main/cool-ai"><b>쿨메신저 비서</b></a> <img src="https://img.shields.io/badge/new!-ffd43b?style=flat-square" alt="new!" height="16"></td>
 <td>쿨메신저 쪽지를 AI가 할 일·적을 것·기억할 것으로 정리해 항상 위 작은 창에 보여 줘요 (윈도우 프로그램)</td>
-<td align="center"><a href="https://github.com/berryst41/school/raw/main/cool-ai/cool-ai.zip"><b>⬇️&nbsp;받&#8288;기<br>v0.2.0</b></a></td>
+<td align="center"><a href="https://github.com/berryst41/school/raw/main/cool-ai/cool-ai.zip"><b>⬇️&nbsp;받&#8288;기<br>v0.2.1</b></a></td>
 </tr>
 <tr><td colspan="3"><b>🧑‍🏫 수업에 쓰는 도구</b></td></tr>
 <tr>
