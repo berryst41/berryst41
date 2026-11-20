@@ -47,13 +47,13 @@
 <td align="center"><a href="https://github.com/berryst41/school/raw/main/main-monitor/main-monitor.zip"><b>⬇️&nbsp;받&#8288;기<br>v1.4.1</b></a></td>
 </tr>
 <tr>
-<td>🤖 <a href="https://github.com/berryst41/school/tree/main/cool-ai"><b>쿨메신저 비서</b></a> <img src="https://img.shields.io/badge/new!-ffd43b?style=flat-square" alt="new!" height="16"> <img src="https://img.shields.io/badge/update-ff922b?style=flat-square" alt="update" height="16"></td>
+<td>🤖 <a href="https://github.com/berryst41/school/tree/main/cool-ai"><b>쿨메신저 비서</b></a> <img src="https://img.shields.io/badge/new!-ffd43b?style=flat-square" alt="new!" height="16"></td>
 <td>쿨메신저 쪽지를 AI가 할 일·적을 것·기억할 것으로 정리해 항상 위 작은 창에 보여 줘요 (윈도우 프로그램)</td>
 <td align="center"><a href="https://github.com/berryst41/school/raw/main/cool-ai/cool-ai.zip"><b>⬇️&nbsp;받&#8288;기<br>v0.2.3</b></a></td>
 </tr>
 <tr><td colspan="3"><b>🧑‍🏫 수업에 쓰는 도구</b></td></tr>
 <tr>
-<td>📚 <a href="https://github.com/berryst41/school/tree/main/class"><b>4원칙 학급 운영 자료실</b></a></td>
+<td>📚 <a href="https://github.com/berryst41/school/tree/main/class"><b>4원칙 학급 운영 자료실</b></a> <img src="https://img.shields.io/badge/update-ff922b?style=flat-square" alt="update" height="16"></td>
 <td>아침 멘트·중간놀이·목힘·금요 인성놀이를 요일에 맞춰 폰·PC로 봐요 (허용 코드가 있는 사람만)</td>
 <td align="center"><a href="https://berryst41.github.io/school/class/"><b>📚&nbsp;열&#8288;기</b></a></td>
 </tr>
@@ -106,8 +106,8 @@
 <!-- RECENT:START -->
 | 저장소 | 설명 | 마지막 업데이트 |
 |:---|:---|:---:|
-| [**school**](https://github.com/berryst41/school) <img src="https://img.shields.io/badge/update-ff922b?style=flat-square" alt="update" height="16"> | 교실에서 바로 쓰는 웹 도구들이에요. | 2026.11.19 |
-| [**toy-store**](https://github.com/berryst41/toy-store) <img src="https://img.shields.io/badge/new!-ffd43b?style=flat-square" alt="new!" height="16"> | 궁금한 건 일단 만들어 보는 장난감 가게 | 2026.11.18 |
+| [**toy-store**](https://github.com/berryst41/toy-store) <img src="https://img.shields.io/badge/new!-ffd43b?style=flat-square" alt="new!" height="16"> <img src="https://img.shields.io/badge/update-ff922b?style=flat-square" alt="update" height="16"> | 궁금한 건 일단 만들어 보는 장난감 가게 | 2026.11.20 |
+| [**school**](https://github.com/berryst41/school) | 교실에서 바로 쓰는 웹 도구들이에요. | 2026.11.20 |
 <!-- RECENT:END -->
 
 <br>
